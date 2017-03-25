@@ -212,6 +212,7 @@ PRODUCT_PACKAGES += \
     init.qcom.power.rc \
     init.qcom.usb.rc \
     init.recovery.bacon.rc \
+    init.lk.rc \
     libinit_bacon \
     ueventd.bacon.rc
 
