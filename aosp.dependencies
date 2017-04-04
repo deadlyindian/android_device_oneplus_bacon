@@ -1,27 +1,2 @@
 [
-  {
-    "remote":      "github",
-    "repository": "DirtyUnicorns/android_device_oppo_common",
-    "target_path": "device/oppo/common",
-    "branch": "n7x-caf"
-  },
-  {
-    "remote":      "github",
-    "repository": "hyperUnicorns/lightning-kernel-bacon",
-    "target_path": "kernel/oneplus/msm8974",
-    "branch": "lightning-3.4-los"
-  },
-  {
-     "remote":      "github",
-     "repository": "TheMuppets/proprietary_vendor_oneplus",
-     "target_path": "vendor/oneplus",
-     "branch": "cm-14.1"
-  },
-  {
-     "remote":      "github",
-     "repository": "LineageOS/android_packages_resources_devicesettings",
-     "target_path": "packages/resources/devicesettings",
-     "branch": "cm-14.1"
-  }
 ]
-
