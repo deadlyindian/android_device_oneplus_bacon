@@ -1,6 +1,12 @@
 [
   {
     "remote"     : "github",
+    "repository" : "deadlyindian/android_device_oneplus_bacon",
+    "target_path": "device/oneplus/bacon",
+    "branch"     : "hexa7"
+  },
+  {
+    "remote"     : "github",
     "repository" : "LineageOS/android_device_qcom_common",
     "target_path": "device/qcom/common",
     "branch"     : "cm-14.1"
