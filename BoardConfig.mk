@@ -99,6 +99,7 @@ endif
 
 # Encryption
 TARGET_HW_DISK_ENCRYPTION := true
+TARGET_CRYPTFS_HW_PATH ?= vendor/qcom/opensource/cryptfs_hw
 
 # Flags for modem (we still have an old modem)
 BOARD_GLOBAL_CFLAGS += -DUSE_RIL_VERSION_10
@@ -152,7 +153,7 @@ BOARD_NFC_CHIPSET := pn547
 BOARD_USES_QCOM_HARDWARE := true
 
 # Radio
-TARGET_RIL_VARIANT := caf
+# TARGET_RIL_VARIANT := caf
 
 # Recovery
 TARGET_RECOVERY_FSTAB := $(PLATFORM_PATH)/rootdir/etc/fstab.bacon
@@ -181,8 +182,10 @@ TARGET_USES_WCNSS_CTRL           := true
 TARGET_USES_QCOM_WCNSS_QMI       := true
 TARGET_USES_WCNSS_MAC_ADDR_REV   := true
 TARGET_WCNSS_MAC_PREFIX          := e8bba8
+#WIFI_DRIVER_FW_PATH_PARAM        := "/sys/module/wlan/parameters/fwpath"
 WIFI_DRIVER_FW_PATH_STA          := "sta"
 WIFI_DRIVER_FW_PATH_AP           := "ap"
+WIFI_DRIVER_FW_PATH_P2P          := "p2p"
 WPA_SUPPLICANT_VERSION           := VER_0_8_X
 
 # Inherit from the proprietary version
