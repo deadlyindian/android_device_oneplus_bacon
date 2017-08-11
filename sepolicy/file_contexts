@@ -11,3 +11,7 @@
 # Old camera socket
 /data/cam_socket1                                       u:object_r:camera_socket:s0
 /data/cam_socket2                                       u:object_r:camera_socket:s0
+
+/sys/devices/fdb00000\.qcom,kgsl-3d0/kgsl/kgsl-3d0/gpuclk        u:object_r:sysfs_thermal:s0
+/sys/devices/fdb00000\.qcom,kgsl-3d0/kgsl/kgsl-3d0/max_gpuclk    u:object_r:sysfs_thermal:s0
+/sys/devices/fdb00000\.qcom,kgsl-3d0/kgsl/kgsl-3d0/reset_count   u:object_r:sysfs_thermal:s0
