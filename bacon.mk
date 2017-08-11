@@ -215,7 +215,6 @@ PRODUCT_PACKAGES += \
     ueventd.bacon.rc \
     init.lk.rc \
     init.spectrum.rc \
-    init.supolicy.sh \
     init.spectrum.sh
 
 PRODUCT_PACKAGES += \
