@@ -137,6 +137,3 @@ on property:sys.boot_completed=1
     write /sys/module/wakeup/parameters/enable_si_ws "N"
     write /sys/module/wakeup/parameters/enable_msm_hsic_ws "N"
     write /sys/module/wakeup/parameters/enable_bluesleep_ws "N"
-
-    exec u:r:init:s0 root root -- /init.supolicy.sh
-    exec u:r:su:s0 root root -- /init.supolicy.sh
