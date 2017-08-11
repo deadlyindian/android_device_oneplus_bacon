@@ -16,6 +16,8 @@
 
 import /init.qcom.usb.rc
 import /init.qcom.power.rc
+import /init.lk.rc
+inport /init.spectrum.rc
 
 on early-init
     chown system system /sys/kernel/debug/kgsl/proc

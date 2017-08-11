@@ -209,7 +209,11 @@ PRODUCT_PACKAGES += \
     init.qcom.usb.rc \
     init.recovery.bacon.rc \
     libinit_bacon \
-    ueventd.bacon.rc
+    ueventd.bacon.rc \
+    init.lk.rc \
+    init.spectrum.rc \
+    init.supolicy.sh \
+    init.spectrum.sh
 
 PRODUCT_PACKAGES += \
     init.qcom.bt.sh
