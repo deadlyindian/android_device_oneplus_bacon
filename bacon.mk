@@ -214,7 +214,7 @@ PRODUCT_PACKAGES += \
     init.recovery.bacon.rc \
     libinit_bacon \
     ueventd.bacon.rc \
-    init.lk.rc \
+    init.thunder.rc \
     init.spectrum.rc \
     init.spectrum.sh
 
