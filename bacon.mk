@@ -214,8 +214,7 @@ PRODUCT_PACKAGES += \
     libinit_bacon \
     ueventd.bacon.rc \
     init.thunder.rc \
-    init.spectrum.rc \
-    init.spectrum.sh
+    init.spectrum.rc
 
 PRODUCT_PACKAGES += \
     init.qcom.bt.sh
