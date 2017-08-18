@@ -24,9 +24,9 @@ on property:persist.spectrum.profile=0
     write /sys/devices/system/cpu/cpufreq/smartmax/io_is_busy 1
     write /sys/devices/system/cpu/cpufreq/smartmax/sampling_rate 30000
     write /sys/devices/system/cpu/cpufreq/smartmax/max_cpu_load 65
-    write /sys/devices/system/cpu/cpufreq/smartmax/min_cpu_load 15 
+    write /sys/devices/system/cpu/cpufreq/smartmax/min_cpu_load 15
     write /sys/devices/system/cpu/cpufreq/smartmax/touch_poke_freq 1190400
-    write /sys/devices/system/cpu/cpufreq/smartmax/input_boost_duration 130000
+    write /sys/devices/system/cpu/cpufreq/smartmax/input_boost_duration 13000
     write /sys/class/devfreq/qcom,cpubw.40/governor "cpubw_hwmon"
     write /sys/class/kgsl/kgsl-3d0/devfreq/governor "msm-adreno-tz"
 
