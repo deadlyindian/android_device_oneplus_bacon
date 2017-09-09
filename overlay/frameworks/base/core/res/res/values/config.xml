@@ -377,6 +377,12 @@
     <!-- Proximity check on screen on -->
     <bool name="config_proximityCheckOnWake">true</bool>
 
+    <!-- Proximity check timeout -->
+    <integer name="config_proximityCheckTimeout">100</integer>
+
+    <!-- Proximity check on screen on default -->
+    <bool name="config_proximityCheckOnWakeEnabledByDefault">true</bool>
+
     <!-- Our modem doesn't support this query yet -->
     <string name="config_radio_access_family">GPRS|EDGE|UMTS|HSDPA|HSUPA|HSPA|LTE|HSPAP|GSM|TD_SCDMA|WCDMA|LTE_CA</string>
 
