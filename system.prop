@@ -74,3 +74,8 @@ persist.timed.enable=true
 
 # Wifi
 wifi.interface=wlan0
+
+# Fling velocities
+ro.min.fling_velocity=160
+ro.max.fling_velocity=20000
+
