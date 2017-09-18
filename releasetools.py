@@ -33,6 +33,4 @@ def AddTrustZoneAssertion(info):
     if len(versions) and '*' not in versions:
       cmd = 'assert(bacon.verify_trustzone(' + ','.join(['"%s"' % tz for tz in versions]) + ') == "1");'
       info.script.AppendExtra(cmd)
-  cmd = 'assert(bacon.verify_fs_type() == "1");'
-  info.script.AppendExtra(cmd)
   return

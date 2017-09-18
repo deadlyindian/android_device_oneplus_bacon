@@ -18,7 +18,6 @@
 #include <sys/mman.h>
 #include <sys/stat.h>
 #include <sys/types.h>
-#include <sys/wait.h>
 #include <errno.h>
 #include <fcntl.h>
 #include <stdint.h>
@@ -26,8 +25,6 @@
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
-
-#include <string>
 
 #include "edify/expr.h"
 #include "updater/install.h"
@@ -40,10 +37,6 @@
 #define TZ_VER_STR "QC_IMAGE_VERSION_STRING="
 #define TZ_VER_STR_LEN 24
 #define TZ_VER_BUF_LEN 255
-
-#define CACHE_PART_PATH    "/dev/block/platform/msm_sdcc.1/by-name/cache"
-#define USERDATA_PART_PATH "/dev/block/platform/msm_sdcc.1/by-name/userdata"
-#define SYSTEM_PART_PATH   "/dev/block/platform/msm_sdcc.1/by-name/system"
 
 /* Boyer-Moore string search implementation from Wikipedia */
 
@@ -197,62 +190,6 @@ Value * VerifyTrustZoneFn(const char *name, State *state, int argc, Expr *argv[]
     return StringValue(strdup(ret ? "1" : "0"));
 }
 
-static int check_for_f2fs() {
-    std::string blkid_output;
-    int pipefd[2];
-    pid_t child;
-    FILE *fp;
-    int ret = 1;
-
-    if (pipe(pipefd) < 0)
-        return -1;
-
-    if ((child = fork()) < 0)
-        return -1;
-
-    if (child == 0) {
-        dup2(pipefd[1], STDOUT_FILENO);
-        close(pipefd[0]);
-        close(pipefd[1]);
-
-        execl("/sbin/blkid", "blkid", CACHE_PART_PATH,
-            USERDATA_PART_PATH, SYSTEM_PART_PATH, NULL);
-        return -1;
-    }
-
-    waitpid(child, NULL, 0);
-    close(pipefd[1]);
-
-    fp = fdopen(pipefd[0], "r");
-
-    while (1) {
-        char c = fgetc(fp);
-        if (feof(fp))
-            break;
-        blkid_output += c;
-    }
-
-    fclose(fp);
-
-    if (strstr(blkid_output.c_str(), "f2fs"))
-        ret = 0;
-
-    return ret;
-}
-
-Value * VerifyFsTypeFn(const char *name, State *state, int argc, Expr *argv[]) {
-    int ret;
-
-    ret = check_for_f2fs();
-    if (ret < 0)
-        uiPrintf(state, "Failed to check partitions for F2FS!");
-    else if (ret == 0)
-        uiPrintf(state, "Error, F2FS is not supported! Use EXT4 instead.");
-
-    return StringValue(strdup(ret > 0 ? "1" : "0"));
-}
-
 void Register_librecovery_updater_bacon() {
     RegisterFunction("bacon.verify_trustzone", VerifyTrustZoneFn);
-    RegisterFunction("bacon.verify_fs_type", VerifyFsTypeFn);
 }
