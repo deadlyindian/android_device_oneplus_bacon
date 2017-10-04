@@ -79,3 +79,6 @@ wifi.interface=wlan0
 ro.min.fling_velocity=160
 ro.max.fling_velocity=20000
 
+# SDCardFS
+ro.sys.sdcardfs=true
+
