@@ -1,3 +1,8 @@
-allow mm-qcamerad vendor_camera_data_file:file { read write open getattr };
+allow mm-qcamerad vendor_camera_data_file:file rw_file_perms;
 allow mm-qcamerad camera_socket:sock_file { create unlink write };
 allow mm-qcamerad camera_data_file:sock_file { create unlink };
+
+type_transition mm-qcamerad system_data_file:file vendor_camera_data_file "fdAlbum";
+allow mm-qcamerad vendor_camera_data_file:file create_file_perms;
+
+allow mm-qcamerad sensors_socket:sock_file read;
