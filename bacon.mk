@@ -69,6 +69,9 @@ PRODUCT_PACKAGES += \
     camera.msm8974 \
     Snap
 
+# Offline charging
+PRODUCT_PACKAGES += charger_res_images
+
 # Dalvik/HWUI
 $(call inherit-product-if-exists, frameworks/native/build/phone-xxhdpi-2048-dalvik-heap.mk)
 $(call inherit-product-if-exists, frameworks/native/build/phone-xxhdpi-2048-hwui-memory.mk)
