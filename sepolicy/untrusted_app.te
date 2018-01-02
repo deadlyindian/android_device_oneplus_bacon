@@ -2,4 +2,5 @@
 dontaudit untrusted_app proc:file read;
 
 #============= untrusted_app_25 ==============
-dontaudit untrusted_app_25 proc:file read;
+dontaudit untrusted_app_25 proc:file { read open getattr };
+dontaudit untrusted_app_25 self:fd use;
