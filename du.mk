@@ -12,16 +12,17 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Get the long list of APNs
-PRODUCT_COPY_FILES += device/oneplus/bacon/apns-full-conf.xml:system/etc/apns-conf.xml
-
 # Inherit common telephony configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit from bacon device
 $(call inherit-product, device/oneplus/bacon/bacon.mk)
 
-PRODUCT_NAME := aosp_bacon
+# Inherit some common Dirty stuff.
+$(call inherit-product, vendor/du/config/common_full_phone.mk)
+
+DU_BUILD_TYPE := Deadly-Optimized
+PRODUCT_NAME := du_bacon
 PRODUCT_DEVICE := bacon
 PRODUCT_MANUFACTURER := OnePlus
 PRODUCT_MODEL := A0001
