@@ -1,0 +1,3 @@
+#============= kernel ==============
+allow kernel debugfs_mmc:dir search;
+allow kernel debugfs_mmc:file r_file_perms;
