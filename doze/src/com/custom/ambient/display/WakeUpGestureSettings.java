@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.slimroms.doze.oneplus;
+package com.custom.ambient.display;
 
 import android.app.ActionBar;
 import android.os.Bundle;
