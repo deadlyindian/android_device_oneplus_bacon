@@ -25,7 +25,7 @@ import android.provider.Settings;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class WakeUpGestureSettings extends PreferenceActivity {
+public class DozeSettings extends PreferenceActivity {
 
     private static final String KEY_AMBIENT_DISPLAY_ENABLE = "ambient_display_enable";
     private static final String KEY_GESTURE_POCKET = "gesture_pocket";
