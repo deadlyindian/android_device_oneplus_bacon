@@ -98,10 +98,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.heapminfree=2m \
     dalvik.vm.heapmaxfree=8m
 
-# Dummy HIDL
-PRODUCT_PACKAGES += \
-    android.hidl.base@1.0
-
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health@1.0-impl
