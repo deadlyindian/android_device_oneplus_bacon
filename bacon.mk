@@ -25,8 +25,7 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 PRODUCT_PACKAGES += \
     Launcher3 \
     messaging \
-    Terminal \
-    Changelog
+    Terminal
 
 # ANT+
 PRODUCT_PACKAGES += \
