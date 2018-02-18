@@ -20,8 +20,8 @@ on property:persist.spectrum.profile=0
     write /sys/kernel/msm_limiter/scaling_governor "0:smartmax 1:smartmax 2:smartmax 3:smartmax"
     write /sys/devices/system/cpu/cpufreq/smartmax/awake_ideal_freq 729600
     write /sys/devices/system/cpu/cpufreq/smartmax/down_rate 60000
-    write /sys/devices/system/cpu/cpufreq/smartmax/max_cpu_load 80
-    write /sys/devices/system/cpu/cpufreq/smartmax/min_cpu_load 50
+    write /sys/devices/system/cpu/cpufreq/smartmax/max_cpu_load 65
+    write /sys/devices/system/cpu/cpufreq/smartmax/min_cpu_load 15
     write /sys/devices/system/cpu/cpufreq/smartmax/min_sampling_rate 10000
     write /sys/devices/system/cpu/cpufreq/smartmax/sampling_rate 30000
     write /sys/devices/system/cpu/cpufreq/smartmax/suspend_ideal_freq 268800
