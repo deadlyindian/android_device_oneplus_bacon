@@ -106,6 +106,7 @@ endif
 
 # Encryption
 TARGET_HW_DISK_ENCRYPTION := true
+TARGET_LEGACY_HW_DISK_ENCRYPTION := true
 TARGET_CRYPTFS_HW_PATH := vendor/qcom/opensource/cryptfs_hw
 
 # Filesystem
