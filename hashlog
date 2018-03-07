@@ -1,0 +1,7 @@
+1520650773 1520650773 bacon: Use PowerHAL in hwbinder
+1520650239 1520650239 Revert "msm8974-common: Use QTI HIDL power HAL"
+1520650177 1520650177 Revert "bacon: nuke hammerhead aosp power HAL"
+1520648534 1520648534 bacon: Add the new DU Boot Animation :D
+1520460574 1520460217 bacon: Disable secure discard on lockscreen settings.
+1520460574 1520460175 bacon: nuke hammerhead aosp power HAL
+1520453749 1520453749 msm8974-common: Binderize them all
