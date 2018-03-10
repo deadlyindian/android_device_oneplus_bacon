@@ -87,8 +87,9 @@ PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/usb_audio_policy_configuration.xml:system/vendor/etc/usb_audio_policy_configuration.xml
 
 # Boot animation
-TARGET_SCREEN_HEIGHT := 1920
-TARGET_SCREEN_WIDTH := 1080
+PRODUCT_COPY_FILES += vendor/du/prebuilt/common/media/1080x1920.zip:system/media/bootanimation.zip
+#TARGET_SCREEN_HEIGHT := 1920
+#TARGET_SCREEN_WIDTH := 1080
 
 # Camera
 PRODUCT_PACKAGES += \
