@@ -321,6 +321,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-impl
 
+# Thermal config
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/thermal-engine.conf:system/etc/thermal-engine-8974.conf
+
 # Telephony
 PRODUCT_PACKAGES += \
     telephony-ext
