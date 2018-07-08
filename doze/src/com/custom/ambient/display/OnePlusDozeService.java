@@ -61,7 +61,9 @@ public class OnePlusDozeService extends Service {
 
         public OnePlusProximitySensor(Context context) {
             mSensorManager = (SensorManager)context.getSystemService(Context.SENSOR_SERVICE);
-            mSensor = mSensorManager.getDefaultSensor(Sensor.TYPE_PROXIMITY);
+            if (mSensorManager != null) {
+                mSensor = mSensorManager.getDefaultSensor(Sensor.TYPE_PROXIMITY);
+            }
         }
 
         @Override

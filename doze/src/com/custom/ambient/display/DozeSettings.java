@@ -22,7 +22,6 @@ import android.preference.Preference;
 import android.preference.PreferenceActivity;
 import android.preference.SwitchPreference;
 import android.provider.Settings;
-import android.view.Menu;
 import android.view.MenuItem;
 
 public class DozeSettings extends PreferenceActivity {
@@ -53,7 +52,9 @@ public class DozeSettings extends PreferenceActivity {
         mHandwavePreference.setEnabled(dozeEnabled);
 
         final ActionBar bar = getActionBar();
-        bar.setDisplayHomeAsUpEnabled(true);
+        if (bar != null) {
+            bar.setDisplayHomeAsUpEnabled(true);
+        }
     }
 
     @Override
