@@ -18,10 +18,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from bacon device
 $(call inherit-product, device/oneplus/bacon/bacon.mk)
 
-# Inherit some common Dirty stuff.
-$(call inherit-product, vendor/du/config/common_full_phone.mk)
+# Inherit some common Invictrix stuff.
+$(call inherit-product, vendor/invictrix/config/common_full_phone.mk)
 
-PRODUCT_NAME := du_bacon
+PRODUCT_NAME := invictrix_bacon
 PRODUCT_DEVICE := bacon
 PRODUCT_MANUFACTURER := OnePlus
 PRODUCT_MODEL := A0001
