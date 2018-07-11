@@ -1,2 +1,0 @@
-add_lunch_combo du_bacon-user
-add_lunch_combo du_bacon-userdebug
