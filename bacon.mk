@@ -324,7 +324,7 @@ PRODUCT_PACKAGES += \
 
 # USB Debugging
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.sys.usb.config=mtp,adb
+    persist.sys.usb.config=none
 
 # Enable ADB authentication only for user builds
 ifeq ($(TARGET_BUILD_VARIANT),user)
