@@ -7,3 +7,4 @@ type_transition mm-qcamerad system_data_file:file vendor_camera_data_file "fdAlb
 allow mm-qcamerad vendor_camera_data_file:file create_file_perms;
 
 allow mm-qcamerad sensors_socket:sock_file read;
+allow mm-qcamerad camera_prop:file { open read getattr };
